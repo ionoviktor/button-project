@@ -1,6 +1,6 @@
 
 
-.buttons {
+.buttonsWrapper {
     display: flex;
     flex-direction: column;
 }
@@ -23,7 +23,11 @@ button {
 }
 
 .popUpContent {
+    display: flex;
+    margin-left: -305px;
+    margin-top: 5px;
     color: red;
+    text-align: center;
 }
 
 .cross {
