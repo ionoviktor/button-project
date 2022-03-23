@@ -2,8 +2,7 @@
 const buttons = document.querySelectorAll('button'),
       buttonsWrapper = document.querySelector('.buttonsWrapper')
       popUpWindow = document.querySelector('.popUpWindow'),
-      popUpContent = document.querySelector('.popUpContent'),
-      buttonColor = document.querySelector('.button-color');
+      popUpContent = document.querySelector('.popUpContent');
 
 
 // buttonsWrapper.addEventListener('click', (event) => {
@@ -16,16 +15,9 @@ const buttons = document.querySelectorAll('button'),
 function showMessageIsButtonClick() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            popUpContent.innerHTML = `Вы нажали на ${button.dataset.text} кнопку!`;
             showPopUpWindow();
             closePopUpWindow();
-        })
-    })
-}
-
-function showMessageInWindow() {
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            popUpContent.innerHTML = `Вы нажали на ${button.dataset.text} кнопку!`
         })
     })
 }
@@ -46,5 +38,4 @@ function hidePopUpWindow() {
 }
 
 
-showMessageInWindow();
 showMessageIsButtonClick();
