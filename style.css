@@ -10,6 +10,7 @@ button {
     margin-top: 30px;
     width: 50px;
     height: 30px;
+    cursor: pointer;
 }
 
 .popUpWindow {
@@ -35,4 +36,5 @@ button {
     height: 15px;
     margin-left: 300px;
     margin-top: -15px;
+    cursor: pointer;
 }

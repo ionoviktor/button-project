@@ -2,29 +2,32 @@
 const buttons = document.querySelectorAll('button'),
       buttonsWrapper = document.querySelector('.buttonsWrapper')
       popUpWindow = document.querySelector('.popUpWindow'),
-      popUpContent = document.querySelector('.popUpContent');
+      popUpContent = document.querySelector('.popUpContent'),
+      buttonColor = document.querySelector('.button-color');
 
 
 // buttonsWrapper.addEventListener('click', (event) => {
 //     if (event.target && event.target.tagName == "BUTTON") {
-//         console.log('Hello');
+//         showMessageInWindow();
 //     }
 // });
+
 
 function showMessageIsButtonClick() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             showPopUpWindow();
-            showMessageInWindow();
             closePopUpWindow();
-            console.log(button.className);
         })
     })
 }
 
-
 function showMessageInWindow() {
-    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            popUpContent.innerHTML = `Вы нажали на ${button.className} кнопку!`
+        })
+    })
 }
 
 function closePopUpWindow() {
@@ -42,4 +45,6 @@ function hidePopUpWindow() {
     popUpWindow.style.display = "none";
 }
 
+
+showMessageInWindow();
 showMessageIsButtonClick();
