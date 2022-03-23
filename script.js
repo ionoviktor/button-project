@@ -25,7 +25,7 @@ function showMessageIsButtonClick() {
 function showMessageInWindow() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            popUpContent.innerHTML = `Вы нажали на ${button.className} кнопку!`
+            popUpContent.innerHTML = `Вы нажали на ${button.dataset.text} кнопку!`
         })
     })
 }
